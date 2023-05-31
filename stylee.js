@@ -1,70 +1,45 @@
 (function() {
-  (".skills li")
-    .find(".skills-bar")
-    .each(function(i) {
-      (this)
-        .find(".bar")
-        .delay(i * 150)
-        .animate(
-          {
-            width:
-              (this)
-                .parents()
-                .attr("data-percent") + "%"
-          },
-          1000,
-          "linear",
-          function() {
-            return $(this).css({
-              "transition-duration": ".5s"
-            });
-          }
-        );
-    });
+  var skillsProgItems = document.querySelectorAll(".skills-prog li .skills-bar");
 
-  (".skills-soft li")
-    .find("svg")
-    .each(function(i) {
-      var c, cbar, circle, percent, r;
-      circle = $(this).children(".cbar");
-      r = circle.attr("r");
-      c = Math.PI * (r * 2);
-      percent = $(this)
-        .parent()
-        .data("percent");
-      cbar = (100 - percent) / 100 * c;
-      circle.css({
-        "stroke-dashoffset": c,
-        "stroke-dasharray": c
-      });
-      circle.delay(i * 150).animate(
-        {
-          strokeDashoffset: cbar
-        },
-        1000,
-        "linear",
-        function() {
-          return circle.css({
-            "transition-duration": ".3s"
-          });
+  skillsProgItems.forEach(function(item, i) {
+    var bar = item.querySelector(".bar");
+    var dataPercent = item.parentElement.getAttribute("data-percent");
+
+    setTimeout(function() {
+      bar.style.width = dataPercent + "%";
+      bar.style.transitionDuration = ".5s";
+    }, i * 150);
+  });
+
+  var skillsSoftItems = document.querySelectorAll(".skills-soft li svg");
+
+  skillsSoftItems.forEach(function(item, i) {
+    var circle = item.querySelector(".cbar");
+    var r = circle.getAttribute("r");
+    var c = Math.PI * (r * 2);
+    var percent = item.parentElement.dataset.percent;
+    var cbar = (100 - percent) / 100 * c;
+
+    circle.style.strokeDashoffset = c;
+    circle.style.strokeDasharray = c;
+
+    setTimeout(function() {
+      circle.style.strokeDashoffset = cbar;
+      circle.style.transitionDuration = ".3s";
+    }, i * 150);
+
+    var counterElement = item.nextElementSibling;
+    var counter = 0;
+
+    setTimeout(function() {
+      var counterInterval = setInterval(function() {
+        if (counter >= percent) {
+          clearInterval(counterInterval);
+        } else {
+          counter++;
+          counterElement.innerText = Math.ceil(counter) + "%";
         }
-      );
-      (this)
-        .siblings("small")
-        .prop("Counter", 0)
-        .delay(i * 150)
-        .animate(
-          {
-            Counter: percent
-          },
-          {
-            duration: 1000,
-            step: function(now) {
-              return $(this).text(Math.ceil(now) + "%");
-            }
-          }
-        );
-    });
-}.call(this));
-
-//# sourceURL=coffeescript
+      }, 10);
+    }, i * 150);
+  });
+})();
