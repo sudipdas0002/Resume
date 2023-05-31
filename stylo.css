@@ -192,46 +192,63 @@ h3 {
 .resume .base .follow .box i.fa::before {
   display: block;
 }
-.resume .func .language {
-  background: #303f9f;
-  margin: 15px 0 0;
-  padding: 15px;
+@keyframes circle {
+  from {
+    box-shadow: 0 0 0 0px #fdd835;
+  }
+  to {
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0);
+  }
 }
 .resume .func .language-items {
-  box-sizing: border-box;
-  padding: 0 0 15px;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
+  clear: both;
+  background: #303f9f;
+  padding: 15px;
+  margin: 15px 0 0;
 }
-.resume .func .language-items div {
+.resume .func .language-items ul {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  text-align: center;
 }
-.resume .func .language-items div:hover i {
+.resume .func .language-items ul li {
+  position: static;
+}
+.resume .func .language-items ul li:hover svg .cbar {
+  stroke: #fdd835;
+  stroke-width: 4px;
+}
+.resume .func .language-items ul li:hover span,
+.resume .func .language-items-soft ul li:hover small {
   transform: scale(1.2);
 }
-.resume .func .language-items div:hover span {
-  color: #fdd835;
-  transition-duration: 0.3s;
+.resume .func .language-items ul li svg {
+  width: 50%;
+  fill: transparent;
+  transform: rotate(-90deg);
 }
-.resume .func .language-items div i {
-  font-size: 45px;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  color: #ffb300;
-  transition-duration: 0.3s;
+.resume .func .language-items ul li svg circle {
+  stroke-width: 1px;
+  stroke: #ffffff;
 }
-.resume .func .language-items div span {
+.resume .func .language-items ul li svg .cbar {
+  stroke-width: 3px;
+  stroke: #ffb300;
+  stroke-linecap: round;
+}
+.resume .func .language-items ul li span,
+.resume .func .language-items ul li small {
+  position: absolute;
   display: block;
-}.resume .func {
+  width: 50%;
+  top: 32%;
+  transition-duration: 0.3s;
+}
+.resume .func .language-items ul li span {
+  top: 40%;
+}
+
+.resume .func {
   width: 100%;
   padding: 30px;
 }
@@ -285,14 +302,7 @@ h3 {
 .resume .func .edu ul li:hover span {
   color: #fdd835;
 }
-@keyframes circle {
-  from {
-    box-shadow: 0 0 0 0px #fdd835;
-  }
-  to {
-    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0);
-  }
-}
+
 .resume .func .work ul li:first-of-type::before,
 .resume .func .edu ul li:first-of-type::before {
   width: 10px;
