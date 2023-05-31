@@ -38,20 +38,20 @@ ul {
   list-style-type: none;
   padding: 0;
 }
-h2 { color: #0062ffea;
+h2 { color: #aeff00ea;
   margin: 10px 0;
-  text-transform: lowercase;
-  font-size: 1.25e
+  text-transform: capitalize;
+  font-size: 1.25em;
 }
 h3 {
-  color: #ffb300ea;
-  margin: 10px 0;
-  text-transform: lowercase;
+  color: #030200ea;
+  margin: 0 0;
+  text-transform: capitalize;
   font-size: 1.25em;
 }
 
 .resume {
-  width: 960px;
+  width: 1000px;
   background: #1a237e;
   color: #ffffff;
   margin: 20px auto;
@@ -73,7 +73,7 @@ h3 {
   padding-bottom: 0;
 }
 .resume .base {
-  width: 30%;
+  width: 35%;
   padding: 30px 15px;
   background: #303f9f;
   color: #ffffff;
@@ -105,12 +105,7 @@ h3 {
   justify-content: center;
   align-items: center;
 }
-.resume .base .profile .fa-rocket {
-  font-size: 100px;
-  text-align: center;
-  margin: auto;
-  color: #303f9f;
-}
+
 .resume .base .profile .info {
   text-align: center;
   color: #ffffff;
@@ -197,24 +192,63 @@ h3 {
 .resume .base .follow .box i.fa::before {
   display: block;
 }
-.resume .func {
+.resume .func .language {
+  background: #303f9f;
+  margin: 15px 0 0;
+  padding: 15px;
+}
+.resume .func .language-items {
+  box-sizing: border-box;
+  padding: 0 0 15px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.resume .func .language-items div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.resume .func .language-items div:hover i {
+  transform: scale(1.2);
+}
+.resume .func .language-items div:hover span {
+  color: #fdd835;
+  transition-duration: 0.3s;
+}
+.resume .func .language-items div i {
+  font-size: 45px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  color: #ffb300;
+  transition-duration: 0.3s;
+}
+.resume .func .language-items div span {
+  display: block;
+}.resume .func {
   width: 100%;
   padding: 30px;
 }
 .resume .func:hover > div {
   transition-duration: 0.5s;
 }
-.resume .func:hover > div:hover h3 i {
+.resume .func:hover > div:hover h2 i {
   transform: scale(1.25);
 }
 .resume .func:hover > div:not(:hover) {
   opacity: 0.5;
 }
-.resume .func h3 {
+.resume .func h2 {
   transition-duration: 0.3s;
   margin-top: 0;
 }
-.resume .func h3 i {
+.resume .func h2 i {
   color: #303f9f;
   background: #ffb300;
   width: 42px;
@@ -438,6 +472,6 @@ h3 {
   color: #ffb300;
   transition-duration: 0.3s;
 }
-.resume .func .interests-items div span {
+.resume .func .hobbies-items div span {
   display: block;
 }
