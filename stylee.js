@@ -11,7 +11,7 @@
     }, i * 150);
   });
 
-  var skillsSoftItems = document.querySelectorAll(".skills-soft li svg");
+  var skillsSoftItems = document.querySelectorAll(".expertise li svg");
 
   skillsSoftItems.forEach(function(item, i) {
     var circle = item.querySelector(".cbar");
@@ -37,7 +37,6 @@
           clearInterval(counterInterval);
         } else {
           counter++;
-         
         }
       }, 10);
     }, i * 150);
