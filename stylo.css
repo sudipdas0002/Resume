@@ -278,55 +278,55 @@ h3 {
   margin-right: 8px;
   transition-duration: 0.3s;
 }
-.resume .func .work,
-.resume .func .edu {
+.resume .func .edu,
+.resume .func .cert {
   float: left;
 }
-.resume .func .work small,
-.resume .func .edu small {
+.resume .func .edu small,
+.resume .func .cert small {
   display: block;
   opacity: 0.7;
 }
-.resume .func .work ul li,
-.resume .func .edu ul li {
+.resume .func .edu ul li,
+.resume .func .cert ul li {
   position: relative;
   margin-left: 15px;
   padding-left: 25px;
   padding-bottom: 15px;
 }
-.resume .func .work ul li:hover::before,
-.resume .func .edu ul li:hover::before {
+.resume .func .edu ul li:hover::before,
+.resume .func .cert ul li:hover::before {
   animation: circle 1.2s infinite;
 }
-.resume .func .work ul li:hover span,
-.resume .func .edu ul li:hover span {
+.resume .func .edu ul li:hover span,
+.resume .func .cert ul li:hover span {
   color: #fdd835;
 }
 
-.resume .func .work ul li:first-of-type::before,
-.resume .func .edu ul li:first-of-type::before {
+.resume .func .edu ul li:first-of-type::before,
+.resume .func .cert ul li:first-of-type::before {
   width: 10px;
   height: 10px;
   left: 1px;
 }
-.resume .func .work ul li:last-of-type,
-.resume .func .edu ul li:last-of-type {
+.resume .func .edu ul li:last-of-type,
+.resume .func .cert ul li:last-of-type {
   padding-bottom: 3px;
 }
-.resume .func .work ul li:last-of-type::after,
-.resume .func .edu ul li:last-of-type::after {
+.resume .func .edu ul li:last-of-type::after,
+.resume .func .cert ul li:last-of-type::after {
   border-radius: 1.5px;
 }
-.resume .func .work ul li::before,
-.resume .func .work ul li::after,
 .resume .func .edu ul li::before,
-.resume .func .edu ul li::after {
+.resume .func .edu ul li::after,
+.resume .func .cert ul li::before,
+.resume .func .cert ul li::after {
   content: "";
   display: block;
   position: absolute;
 }
-.resume .func .work ul li::before,
-.resume .func .edu ul li::before {
+.resume .func .edu ul li::before,
+.resume .func .cert ul li::before {
   width: 7px;
   height: 7px;
   border: 3px solid #ffffff;
@@ -335,25 +335,25 @@ h3 {
   left: 3px;
   z-index: 1;
 }
-.resume .func .work ul li::after,
-.resume .func .edu ul li::after {
+.resume .func .edu ul li::after,
+.resume .func .cert ul li::after {
   width: 3px;
   height: 100%;
   background: #ffffff;
   left: 5px;
   top: 0;
 }
-.resume .func .work ul li span,
-.resume .func .edu ul li span {
+.resume .func .woedurk ul li span,
+.resume .func .cert ul li span {
   transition-duration: 0.3s;
 }
-.resume .func .work {
+.resume .func .edu {
   width: 48%;
   background: #303f9f;
   padding: 15px;
   margin: 0 4% 15px 0;
 }
-.resume .func .edu {
+.resume .func .cert {
   width: 48%;
   background: #303f9f;
   padding: 15px;
@@ -398,51 +398,51 @@ h3 {
   box-shadow: 0 0 0 #ffb300;
   border-radius: 5px;
 }
-.resume .func .skills-soft {
+.resume .func .expertise {
   clear: both;
   background: #303f9f;
   padding: 15px;
   margin: 15px 0 0;
 }
-.resume .func .skills-soft ul {
+.resume .func .expertise ul {
   display: flex;
   justify-content: space-between;
   text-align: center;
 }
-.resume .func .skills-soft ul li {
+.resume .func .expertise ul li {
   position: relative;
 }
-.resume .func .skills-soft ul li:hover svg .cbar {
+.resume .func .expertise ul li:hover svg .cbar {
   stroke: #fdd835;
   stroke-width: 4px;
 }
-.resume .func .skills-soft ul li:hover span,
-.resume .func .skills-soft ul li:hover small {
+.resume .func .expertise ul li:hover span,
+.resume .func .expertise ul li:hover small {
   transform: scale(1.2);
 }
-.resume .func .skills-soft ul li svg {
+.resume .func .expertise ul li svg {
   width: 95%;
   fill: transparent;
   transform: rotate(-90deg);
 }
-.resume .func .skills-soft ul li svg circle {
+.resume .func .expertise ul li svg circle {
   stroke-width: 1px;
   stroke: #ffffff;
 }
-.resume .func .skills-soft ul li svg .cbar {
+.resume .func .expertise ul li svg .cbar {
   stroke-width: 3px;
   stroke: #ffb300;
   stroke-linecap: round;
 }
-.resume .func .skills-soft ul li span,
-.resume .func .skills-soft ul li small {
+.resume .func .expertise ul li span,
+.resume .func .expertise ul li small {
   position: absolute;
   display: block;
   width: 100%;
   top: 52%;
   transition-duration: 0.3s;
 }
-.resume .func .skills-soft ul li span {
+.resume .func .expertise ul li span {
   top: 40%;
 }
 .resume .func .hobbies {
