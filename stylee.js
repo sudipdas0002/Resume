@@ -37,7 +37,7 @@
           clearInterval(counterInterval);
         } else {
           counter++;
-          counterElement.innerText = Math.ceil(counter) + "%";
+         
         }
       }, 10);
     }, i * 150);
